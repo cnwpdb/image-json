@@ -9,15 +9,10 @@ RUN comfy node install --exit-on-fail comfyui-easy-use@1.3.5
 RUN comfy node install --exit-on-fail ComfyUI_Comfyroll_CustomNodes
 RUN comfy node install --exit-on-fail qweneditutils@2.0.7
 RUN comfy node install --exit-on-fail seedvr2_videoupscaler@2.5.24
-# Could not resolve unknown_registry node 'LayerUtility: PurgeVRAM V2' (no aux_id) - skipping
 
-# download models into comfyui
-# RUN # Could not find URL for consistence_edit_v2.safetensors (type: loras)
-# RUN # Could not find URL for Qwen-Image-Edit-F2P.safetensors (type: loras)
-# RUN # Could not find URL for ema_vae_fp16.safetensors (type: Unknown)
-# RUN # Could not find URL for seedvr2_ema_3b_fp8_e4m3fn.safetensors (type: Unknown)
-# RUN # Could not find URL for Qwen-Rapid-AIO-NSFW-v14.safetensors (type: checkpoints)
-# RUN # Could not find URL for qwen-image_nsfw_adv_v1.0.safetensors (type: loras)
+# 手动安装 LayerStyle (包含 PurgeVRAM V2)
+RUN cd /comfyui/custom_nodes && \
+    git clone https://github.com/chflame163/ComfyUI_LayerStyle && \
+    pip install -r ComfyUI_LayerStyle/requirements.txt
 
-# copy all input data (like images or videos) into comfyui (uncomment and adjust if needed)
-# COPY input/ /comfyui/input/
+# 模型通过 Network Volume 挂载，不需要在这里下载
