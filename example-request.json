@@ -1,0 +1,970 @@
+{
+  "input": {
+    "workflow": {
+      "989": {
+        "inputs": {
+          "ckpt_name": "Qwen-Rapid-AIO-NSFW-v14.safetensors"
+        },
+        "class_type": "CheckpointLoaderSimple",
+        "_meta": {
+          "title": "CheckpointLoaderSimple"
+        }
+      },
+      "990": {
+        "inputs": {
+          "text": "lanczos",
+          "image": [
+            "1036",
+            0
+          ]
+        },
+        "class_type": "ImageScaleToTotalPixels",
+        "_meta": {
+          "title": "ImageScaleToTotalPixels"
+        }
+      },
+      "993": {
+        "inputs": {
+          "text": "",
+          "clip": [
+            "989",
+            1
+          ],
+          "vae": [
+            "989",
+            2
+          ],
+          "vl_resize_image1": [
+            "990",
+            0
+          ],
+          "prompt": [
+            "1086",
+            0
+          ]
+        },
+        "class_type": "TextEncodeQwenImageEditPlusAdvance_lrzjason",
+        "_meta": {
+          "title": "TextEncodeQwenImageEditPlusAdvance_lrzjason"
+        }
+      },
+      "994": {
+        "inputs": {
+          "conditioning": [
+            "993",
+            0
+          ]
+        },
+        "class_type": "ConditioningZeroOut",
+        "_meta": {
+          "title": "ConditioningZeroOut"
+        }
+      },
+      "995": {
+        "inputs": {
+          "samples": [
+            "1067",
+            0
+          ],
+          "vae": [
+            "989",
+            2
+          ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+          "title": "VAEDecode"
+        }
+      },
+      "996": {
+        "inputs": {
+          "value": true,
+          "anything": [
+            "995",
+            0
+          ]
+        },
+        "class_type": "LayerUtility: PurgeVRAM V2",
+        "_meta": {
+          "title": "LayerUtility: PurgeVRAM V2"
+        }
+      },
+      "1004": {
+        "inputs": {
+          "text": "有着写实的小乳房"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1005": {
+        "inputs": {
+          "text": "有着写实的中等乳房"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1006": {
+        "inputs": {
+          "text": "有着写实的大乳房"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1007": {
+        "inputs": {
+          "text": "有着写实的凸起的乳头"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1008": {
+        "inputs": {
+          "text": "有着写实的小圈深色乳晕"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1009": {
+        "inputs": {
+          "text": "有着少女粉嫩乳晕"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1011": {
+        "inputs": {
+          "text": "有着写实的小阴唇"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1012": {
+        "inputs": {
+          "text": "有着写实的大阴唇"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1013": {
+        "inputs": {
+          "text": "有着写实的大阴蒂"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1014": {
+        "inputs": {
+          "text": "有着写实的白人的皮肤和肤色"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1015": {
+        "inputs": {
+          "text": "有着性感的无毛阴部"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1016": {
+        "inputs": {
+          "text": "",
+          "text1": [
+            "1048",
+            0
+          ],
+          "text2": [
+            "1045",
+            0
+          ],
+          "text3": [
+            "1049",
+            0
+          ],
+          "text4": [
+            "1063",
+            0
+          ],
+          "text5": [
+            "1061",
+            0
+          ],
+          "text6": [
+            "1031",
+            0
+          ],
+          "text7": [
+            "1027",
+            0
+          ]
+        },
+        "class_type": "ttN text7BOX_concat",
+        "_meta": {
+          "title": "ttN text7BOX_concat"
+        }
+      },
+      "1017": {
+        "inputs": {
+          "text": "有着写实的小阴蒂"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1018": {
+        "inputs": {
+          "text": "且有褶皱写实的外阴"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1019": {
+        "inputs": {
+          "text": "有着平坦的乳头"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1020": {
+        "inputs": {
+          "text": "有着写实的大圈深色乳晕"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1022": {
+        "inputs": {
+          "filename_prefix": "ComfyUI",
+          "images": [
+            "1081",
+            0
+          ]
+        },
+        "class_type": "SaveImage",
+        "_meta": {
+          "title": "SaveImage"
+        }
+      },
+      "1023": {
+        "inputs": {
+          "text": ""
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1024": {
+        "inputs": {
+          "text": ""
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1025": {
+        "inputs": {
+          "text": "有着写实的凸起的阴蒂"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1026": {
+        "inputs": {
+          "text": ""
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1027": {
+        "inputs": {
+          "value": 4,
+          "input1": [
+            "1017",
+            0
+          ],
+          "input2": [
+            "1013",
+            0
+          ],
+          "input3": [
+            "1025",
+            0
+          ],
+          "input4": [
+            "1026",
+            0
+          ]
+        },
+        "class_type": "ImpactSwitch",
+        "_meta": {
+          "title": "ImpactSwitch"
+        }
+      },
+      "1028": {
+        "inputs": {
+          "text": "有着中量杂乱的写实的阴毛分布"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1029": {
+        "inputs": {
+          "text": "有着大量杂乱的写实的阴毛分布"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1030": {
+        "inputs": {
+          "text": "有着巨量杂乱的写实的阴毛分布"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1031": {
+        "inputs": {
+          "value": 4,
+          "input1": [
+            "1018",
+            0
+          ],
+          "input2": [
+            "1011",
+            0
+          ],
+          "input3": [
+            "1012",
+            0
+          ],
+          "input4": [
+            "1024",
+            0
+          ]
+        },
+        "class_type": "ImpactSwitch",
+        "_meta": {
+          "title": "ImpactSwitch"
+        }
+      },
+      "1032": {
+        "inputs": {
+          "text": "有着少量杂乱的写实的阴毛分布"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1033": {
+        "inputs": {
+          "text": "有着杂乱的写实的阴毛分布"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1034": {
+        "inputs": {
+          "filename": "qwen-image_nsfw_adv_v1.0.safetensors",
+          "model": [
+            "989",
+            0
+          ],
+          "strength_model": [
+            "1044",
+            0
+          ]
+        },
+        "class_type": "LoraLoaderModelOnly",
+        "_meta": {
+          "title": "LoraLoaderModelOnly"
+        }
+      },
+      "1035": {
+        "inputs": {
+          "text": "仅移除照片中人物的所有衣服，不要对头部做任何采样。这是用日常业余设备拍摄的照片，她是裸体的美丽的中国女性，身材色情性感，皮肤白皙，按照服装胸部位置显示的轮廓，来展示脱衣后的真实的乳房大小，微微凸起的写实的奶头，浅色写实乳晕，丰满的写实阴部，中量杂乱的写实阴毛分布。Smartphone Photoreal,Rebalancing。Professional digital photography。"
+        },
+        "class_type": "CR Text",
+        "_meta": {
+          "title": "CR Text"
+        }
+      },
+      "1036": {
+        "inputs": {
+          "image": "北京车展终于结束啦～_4_刘一琳_来自小红书网页版.jpg"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+          "title": "LoadImage"
+        }
+      },
+      "1039": {
+        "inputs": {
+          "filename": "Qwen-Image-Edit-F2P.safetensors",
+          "model": [
+            "1041",
+            0
+          ]
+        },
+        "class_type": "LoraLoaderModelOnly",
+        "_meta": {
+          "title": "LoraLoaderModelOnly"
+        }
+      },
+      "1041": {
+        "inputs": {
+          "filename": "consistence_edit_v2.safetensors",
+          "model": [
+            "1034",
+            0
+          ]
+        },
+        "class_type": "LoraLoaderModelOnly",
+        "_meta": {
+          "title": "LoraLoaderModelOnly"
+        }
+      },
+      "1044": {
+        "inputs": {
+          "value": 0.3500000000000001
+        },
+        "class_type": "easy float",
+        "_meta": {
+          "title": "easy float"
+        }
+      },
+      "1045": {
+        "inputs": {
+          "value": 1,
+          "input1": [
+            "1071",
+            0
+          ],
+          "input2": [
+            "1004",
+            0
+          ],
+          "input3": [
+            "1005",
+            0
+          ],
+          "input4": [
+            "1006",
+            0
+          ],
+          "input5": [
+            "1053",
+            0
+          ],
+          "input6": [
+            "1056",
+            0
+          ],
+          "input7": [
+            "1058",
+            0
+          ]
+        },
+        "class_type": "ImpactSwitch",
+        "_meta": {
+          "title": "ImpactSwitch"
+        }
+      },
+      "1046": {
+        "inputs": {
+          "text": "有着写实的亚洲人的皮肤和肤色"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1047": {
+        "inputs": {
+          "text": "有着写实的黑人的皮肤和肤色"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1048": {
+        "inputs": {
+          "value": 4,
+          "input1": [
+            "1046",
+            0
+          ],
+          "input2": [
+            "1014",
+            0
+          ],
+          "input3": [
+            "1047",
+            0
+          ],
+          "input4": [
+            "1059",
+            0
+          ],
+          "input5": [
+            "1060",
+            0
+          ]
+        },
+        "class_type": "ImpactSwitch",
+        "_meta": {
+          "title": "ImpactSwitch"
+        }
+      },
+      "1049": {
+        "inputs": {
+          "value": 1,
+          "input1": [
+            "1019",
+            0
+          ],
+          "input2": [
+            "1007",
+            0
+          ],
+          "input3": [
+            "1054",
+            0
+          ],
+          "input4": [
+            "1064",
+            0
+          ]
+        },
+        "class_type": "ImpactSwitch",
+        "_meta": {
+          "title": "ImpactSwitch"
+        }
+      },
+      "1050": {
+        "inputs": {
+          "text": "有着写实的大圈浅色乳晕"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1053": {
+        "inputs": {
+          "text": "有着写实的巨乳"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1054": {
+        "inputs": {
+          "text": "有着写实的微微凸起的乳头"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1055": {
+        "inputs": {
+          "text": "写实的乳晕"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1056": {
+        "inputs": {
+          "text": "只增大胸部到非常规比例的超大特大下垂的巨乳，非常规比例的超大特大下垂的巨乳比身体宽",
+          "text2": [
+            "1057",
+            0
+          ]
+        },
+        "class_type": "ttN concat",
+        "_meta": {
+          "title": "ttN concat"
+        }
+      },
+      "1057": {
+        "inputs": {
+          "text": "30"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1058": {
+        "inputs": {
+          "text": ""
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1059": {
+        "inputs": {
+          "text": "是中国人"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1060": {
+        "inputs": {
+          "text": ""
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1061": {
+        "inputs": {
+          "value": 6,
+          "input1": [
+            "1033",
+            0
+          ],
+          "input2": [
+            "1032",
+            0
+          ],
+          "input3": [
+            "1028",
+            0
+          ],
+          "input4": [
+            "1029",
+            0
+          ],
+          "input5": [
+            "1030",
+            0
+          ],
+          "input6": [
+            "1015",
+            0
+          ],
+          "input7": [
+            "1023",
+            0
+          ]
+        },
+        "class_type": "ImpactSwitch",
+        "_meta": {
+          "title": "ImpactSwitch"
+        }
+      },
+      "1063": {
+        "inputs": {
+          "value": 1,
+          "input1": [
+            "1009",
+            0
+          ],
+          "input2": [
+            "1050",
+            0
+          ],
+          "input3": [
+            "1008",
+            0
+          ],
+          "input4": [
+            "1020",
+            0
+          ],
+          "input5": [
+            "1055",
+            0
+          ],
+          "input6": [
+            "1077",
+            0
+          ]
+        },
+        "class_type": "ImpactSwitch",
+        "_meta": {
+          "title": "ImpactSwitch"
+        }
+      },
+      "1064": {
+        "inputs": {
+          "text": ""
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1067": {
+        "inputs": {
+          "seed": 226604026581658,
+          "steps": 8,
+          "cfg": 1,
+          "sampler_name": "euler",
+          "scheduler": "beta",
+          "denoise": 1,
+          "model": [
+            "1039",
+            0
+          ],
+          "positive": [
+            "993",
+            0
+          ],
+          "negative": [
+            "994",
+            0
+          ],
+          "latent_image": [
+            "993",
+            1
+          ]
+        },
+        "class_type": "KSampler",
+        "_meta": {
+          "title": "KSampler"
+        }
+      },
+      "1068": {
+        "inputs": {
+          "text": "仅移除照片中人物的所有衣服。这是用日常业余设备拍摄的色情裸体照片。SmartphonePhotoreal,Professional digital photography。保持人物在画面中的比例，她是中国人，她的胸前平整无明显隆起，犹如幼女的胸前，小而平。，有着平坦的乳头，有着少女粉嫩乳晕，有着性感的无毛阴部",
+          "anything": [
+            "1069",
+            0
+          ]
+        },
+        "class_type": "easy showAnything",
+        "_meta": {
+          "title": "easy showAnything"
+        }
+      },
+      "1069": {
+        "inputs": {
+          "text": "",
+          "text_a": [
+            "1070",
+            0
+          ],
+          "text_b": [
+            "1016",
+            7
+          ]
+        },
+        "class_type": "Text Concatenate",
+        "_meta": {
+          "title": "Text Concatenate"
+        }
+      },
+      "1070": {
+        "inputs": {
+          "text": "仅移除照片中人物的所有衣服。这是用日常业余设备拍摄的色情裸体照片。SmartphonePhotoreal,Professional digital photography。保持人物在画面中的比例，她"
+        },
+        "class_type": "CR Text",
+        "_meta": {
+          "title": "CR Text"
+        }
+      },
+      "1071": {
+        "inputs": {
+          "text": "她的胸前平整无明显隆起，犹如幼女的胸前，小而平。"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1072": {
+        "inputs": {
+          "text": "仅移除照片中人物的所有衣服。这是用日常业余设备拍摄的色情裸体照片。SmartphonePhotoreal,Professional digital photography。保持人物在画面中的比例，她背对画面，美丽后背，皮肤白皙有质感，宽胯坚挺翘臀，丰满大屁股，保持腰部。"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1074": {
+        "inputs": {
+          "value": 1,
+          "input1": [
+            "1068",
+            0
+          ],
+          "input2": [
+            "1072",
+            0
+          ],
+          "input3": [
+            "1078",
+            0
+          ]
+        },
+        "class_type": "ImpactSwitch",
+        "_meta": {
+          "title": "ImpactSwitch"
+        }
+      },
+      "1077": {
+        "inputs": {
+          "text": ""
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1078": {
+        "inputs": {
+          "text": ""
+        },
+        "class_type": "CR Prompt Text",
+        "_meta": {
+          "title": "CR Prompt Text"
+        }
+      },
+      "1081": {
+        "inputs": {
+          "value": 1,
+          "input1": [
+            "995",
+            0
+          ],
+          "input2": [
+            "1093",
+            0
+          ]
+        },
+        "class_type": "ImpactSwitch",
+        "_meta": {
+          "title": "ImpactSwitch"
+        }
+      },
+      "1086": {
+        "inputs": {
+          "text": "仅移除照片中人物的所有衣服。这是用日常业余设备拍摄的色情裸体照片。SmartphonePhotoreal,Professional digital photography。保持人物在画面中的比例，她是中国人，她的胸前平整无明显隆起，犹如幼女的胸前，小而平。，有着平坦的乳头，有着少女粉嫩乳晕，有着性感的无毛阴部",
+          "anything": [
+            "1074",
+            0
+          ]
+        },
+        "class_type": "easy showAnything",
+        "_meta": {
+          "title": "easy showAnything"
+        }
+      },
+      "1088": {
+        "inputs": {
+          "text": "她的胸如幼女的胸前小而平。"
+        },
+        "class_type": "Text Multiline",
+        "_meta": {
+          "title": "Text Multiline"
+        }
+      },
+      "1093": {
+        "inputs": {
+          "value": 113791009,
+          "image": [
+            "1097",
+            0
+          ],
+          "dit": [
+            "1094",
+            0
+          ],
+          "vae": [
+            "1096",
+            0
+          ]
+        },
+        "class_type": "SeedVR2VideoUpscaler",
+        "_meta": {
+          "title": "SeedVR2VideoUpscaler"
+        }
+      },
+      "1094": {
+        "inputs": {
+          "filename": "seedvr2_ema_3b_fp8_e4m3fn.safetensors"
+        },
+        "class_type": "SeedVR2LoadDiTModel",
+        "_meta": {
+          "title": "SeedVR2LoadDiTModel"
+        }
+      },
+      "1096": {
+        "inputs": {
+          "filename": "ema_vae_fp16.safetensors"
+        },
+        "class_type": "SeedVR2LoadVAEModel",
+        "_meta": {
+          "title": "SeedVR2LoadVAEModel"
+        }
+      },
+      "1097": {
+        "inputs": {
+          "text": "lanczos",
+          "image": [
+            "995",
+            0
+          ]
+        },
+        "class_type": "ImageScaleBy",
+        "_meta": {
+          "title": "ImageScaleBy"
+        }
+      }
+    }
+  }
+}
